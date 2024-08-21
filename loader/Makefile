@@ -71,7 +71,7 @@ endif
 
 C_FLAGS := -std=gnu11 -g3 -nostdlib -ffreestanding -DBOARD_$(BOARD) -DNUM_CPUS=$(NUM_CPUS) -DARCH_$(ARCH) -Wall -Werror $(C_FLAGS_ARCH)
 ASM_CPP_FLAGS := -x assembler-with-cpp -c -g3 -DBOARD_$(BOARD) -DNUM_CPUS=$(NUM_CPUS) $(ASM_CPP_FLAGS_ARCH)
-ASM_FLAGS := -g3 $(ASM_FLAGS_ARCH)
+ASM_FLAGS := -g $(ASM_FLAGS_ARCH)
 LD_FLAGS := $(LD_FLAGS_ARCH)
 
 PROGS := loader.elf

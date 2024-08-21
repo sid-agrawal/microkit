@@ -546,12 +546,12 @@ def test_tool() -> None:
     assert r == 0
 
 def build_tool(tool_target: Path, target_triple: str) -> None:
-    pyoxidizer = ENV_BIN_DIR / "pyoxidizer"
-    if not pyoxidizer.exists():
-        raise Exception("pyoxidizer does not appear to be installed in your Python environment")
+    # pyoxidizer = ENV_BIN_DIR / "pyoxidizer"
+    # if not pyoxidizer.exists():
+    #     raise Exception("pyoxidizer does not appear to be installed in your Python environment")
 
     r = system(
-        f"{pyoxidizer} build --release --path tool --target-triple {target_triple}"
+        f"pyoxidizer build --release --path tool --target-triple {target_triple}"
     )
     assert r == 0
 

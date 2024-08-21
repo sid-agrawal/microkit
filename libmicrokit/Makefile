@@ -44,7 +44,7 @@ endif
 
 C_FLAGS := -std=gnu11 -g3 -O3 -nostdlib -ffreestanding -Wall -Wno-maybe-uninitialized -Wno-unused-function -Werror -Iinclude -I$(SEL4_SDK)/include $(C_FLAGS_ARCH)
 ASM_CPP_FLAGS := -x assembler-with-cpp -c -g3 $(ASM_CPP_FLAGS_ARCH)
-ASM_FLAGS := -g3 $(ASM_FLAGS_ARCH)
+ASM_FLAGS := -g $(ASM_FLAGS_ARCH)
 
 ifeq ($(ARCH),x86_64)
 	GCC := gcc

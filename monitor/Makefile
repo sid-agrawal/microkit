@@ -22,7 +22,7 @@ endif
 ifeq ($(ARCH),aarch64)
 	C_FLAGS := -std=gnu11 -g3 -O3 -nostdlib -ffreestanding -mcpu=$(GCC_CPU) -DARCH_aarch64 -Wall -Wno-maybe-uninitialized -Werror -I$(SEL4_SDK)/include
 	ASM_CPP_FLAGS := -x assembler-with-cpp -c -g3 -mcpu=$(GCC_CPU)
-	ASM_FLAGS := -g3 -mcpu=$(GCC_CPU)
+	ASM_FLAGS := -g -mcpu=$(GCC_CPU)
 else ifeq ($(ARCH),riscv64)
 	C_FLAGS := -mcmodel=medany -std=gnu11 -g3 -O3 -nostdlib -ffreestanding -march=rv64imac -mabi=lp64 -DARCH_riscv64 -Wall -Wno-maybe-uninitialized -Werror -I$(SEL4_SDK)/include
 	ASM_CPP_FLAGS := -x assembler-with-cpp -c -g3 -march=rv64imac -mabi=lp64
